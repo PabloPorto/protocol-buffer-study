@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+message Banco{
+  string name = 1;
+  string address = 2;
+  int32 age = 3;
+  int64 income = 4;
+}

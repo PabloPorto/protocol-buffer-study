@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+message Person {
+  int32 age = 1;
+  string first_name = 2;
+  string last_name = 3;
+  bytes small_picture = 4;
+  bool is_profile_verified = 5;
+  float height = 6;
+
+  //to express lists or arrays it is necessary to use the reserved word repeated + the type (string, bool, etc)
+  //+ the name of the field and the tag as usual
+  repeated string phone_numbers = 7;
+
+  enum EyeColour {
+    //default value
+    UNKNOWN_EYE_COLOUR = 0;
+    GREEN_EYE = 1;
+    BLUE_EYE = 2;
+    BROWN_EYE = 3;
+  }
+
+  EyeColour eye_colour = 8;
+}
